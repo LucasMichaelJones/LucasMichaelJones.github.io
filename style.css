@@ -1,3 +1,10 @@
+/*  Resubmit. Fixes include:
+    Resized images to all be the same size, which
+    fixed grid alignments on the webpage;
+    Added "margin: auto;" to a handful of classes
+    which had data loss. */
+
+
 /* -------  General Styles ------- */
 
 body {
@@ -38,6 +45,11 @@ main img {
 /* ---  Groups & Items --- */
 
 .group {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
   display: flex;
   flex-direction: column;
 }
@@ -93,6 +105,7 @@ form {
   display: flex;
   /* flex-direction: column; */
   align-items: stretch;
+  margin: auto;
 }
 
 form label {
@@ -133,14 +146,17 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    margin: auto;
   }
   .group {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: auto;
   }
   .column {
     flex-direction: column;
+    display: flex;
   }
 }
